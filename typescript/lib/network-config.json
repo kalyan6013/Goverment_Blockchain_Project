@@ -1,0 +1,149 @@
+{
+    "network-config": {
+        "orderer": {
+            "url": "grpcs://localhost:7050",
+            "server-hostname": "orderer.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/ca.crt"
+        },
+        "org1": {
+            "name": "peerOrg1",
+            "mspid": "Org1MSP",
+            "ca": "https://localhost:7054",
+            "peers": {
+                "peer1": {
+                    "requests": "grpcs://localhost:7051",
+                    "events": "grpcs://localhost:7053",
+                    "server-hostname": "peer0.org1.example.com",
+                    "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt"
+                },
+                "peer2": {
+                    "requests": "grpcs://localhost:7056",
+                    "events": "grpcs://localhost:7058",
+                    "server-hostname": "peer1.org1.example.com",
+                    "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls/ca.crt"
+                },
+                "peer3": {
+                    "requests": "grpcs://localhost:8056",
+                    "events": "grpcs://localhost:8058",
+                    "server-hostname": "peer2.org1.example.com",
+                    "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer2.org1.example.com/tls/ca.crt"
+                },
+                "peer4": {
+                    "requests": "grpcs://localhost:9056",
+                    "events": "grpcs://localhost:9058",
+                    "server-hostname": "peer3.org1.example.com",
+                    "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer3.org1.example.com/tls/ca.crt"
+                }
+            },
+            "admin": {
+                "key": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore",
+                "cert": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts"
+            }
+        },
+        "org2": {
+            "name": "peerOrg2",
+            "mspid": "Org2MSP",
+            "ca": "https://localhost:8054",
+            "peers": {
+                "peer1": {
+                    "requests": "grpcs://localhost:10051",
+                    "events": "grpcs://localhost:10053",
+                    "server-hostname": "peer0.org2.example.com",
+                    "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt"
+                },
+                "peer2": {
+                    "requests": "grpcs://localhost:11056",
+                    "events": "grpcs://localhost:11058",
+                    "server-hostname": "peer1.org2.example.com",
+                    "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/ca.crt"
+                },
+                "peer3": {
+                    "requests": "grpcs://localhost:12051",
+                    "events": "grpcs://localhost:12053",
+                    "server-hostname": "peer0.org2.example.com",
+                    "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org2.example.com/peers/peer2org2.example.com/tls/ca.crt"
+                },
+                "peer4": {
+                    "requests": "grpcs://localhost:13056",
+                    "events": "grpcs://localhost:13058",
+                    "server-hostname": "peer1.org2.example.com",
+                    "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org2.example.com/peers/peer3.org2.example.com/tls/ca.crt"
+                }
+            },
+            "admin": {
+                "key": "../artifacts/channel/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore",
+                "cert": "../artifacts/channel/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts"
+            }
+        },
+        "org3": {
+            "name": "peerOrg3",
+            "mspid": "Org3MSP",
+            "ca": "https://localhost:9054",
+            "peers": {
+                "peer1": {
+                    "requests": "grpcs://localhost:14051",
+                    "events": "grpcs://localhost:14053",
+                    "server-hostname": "peer0.org3.example.com",
+                    "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org3.example.com/peers/peer0.org3.example.com/tls/ca.crt"
+                },
+                "peer2": {
+                    "requests": "grpcs://localhost:15056",
+                    "events": "grpcs://localhost:15058",
+                    "server-hostname": "peer1.org3.example.com",
+                    "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org3.example.com/peers/peer1.org3.example.com/tls/ca.crt"
+                },
+                "peer3": {
+                    "requests": "grpcs://localhost:16051",
+                    "events": "grpcs://localhost:16053",
+                    "server-hostname": "peer2.org3.example.com",
+                    "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org3.example.com/peers/peer2.org3.example.com/tls/ca.crt"
+                },
+                "peer4": {
+                    "requests": "grpcs://localhost:17056",
+                    "events": "grpcs://localhost:17058",
+                    "server-hostname": "peer3.org3.example.com",
+                    "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org3.example.com/peers/peer3.org3.example.com/tls/ca.crt"
+                }
+            },
+            "admin": {
+                "key": "../artifacts/channel/crypto-config/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp/keystore",
+                "cert": "../artifacts/channel/crypto-config/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp/signcerts"
+            }
+        },
+        "org4": {
+            "name": "peerOrg4",
+            "mspid": "Org4MSP",
+            "ca": "https://localhost:10054",
+            "peers": {
+                "peer1": {
+                    "requests": "grpcs://localhost:18051",
+                    "events": "grpcs://localhost:18053",
+                    "server-hostname": "peer0.org4.example.com",
+                    "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org4.example.com/peers/peer0.org4.example.com/tls/ca.crt"
+                },
+                "peer2": {
+                    "requests": "grpcs://localhost:19056",
+                    "events": "grpcs://localhost:19058",
+                    "server-hostname": "peer1.org4.example.com",
+                    "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org4.example.com/peers/peer1.org4.example.com/tls/ca.crt"
+                },
+                "peer3": {
+                    "requests": "grpcs://localhost:20056",
+                    "events": "grpcs://localhost:20058",
+                    "server-hostname": "peer2.org4.example.com",
+                    "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org4.example.com/peers/peer2.org4.example.com/tls/ca.crt"
+                },
+                "peer4": {
+                    "requests": "grpcs://localhost:21056",
+                    "events": "grpcs://localhost:21058",
+                    "server-hostname": "peer3.org4.example.com",
+                    "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org4.example.com/peers/peer3.org4.example.com/tls/ca.crt"
+                }
+            },
+            "admin": {
+                "key": "../artifacts/channel/crypto-config/peerOrganizations/org4.example.com/users/Admin@org4.example.com/msp/keystore",
+                "cert": "../artifacts/channel/crypto-config/peerOrganizations/org4.example.com/users/Admin@org4.example.com/msp/signcerts"
+            }
+        }
+    }
+}
